@@ -6,15 +6,17 @@ confinement: strict
 grade: devel
 
 apps:
-        packer:
-                command: packer
-                plugs:
-                        - home
-                        - network
+  packer:
+    command: packer
+    plugs:
+      - home
+      - network
 
 parts:
-        packer:
-                plugin: go
-                source: git://github.com/mitchellh/packer
-                source-tag: v0.11.0
-                go-importpath: github.com/mitchellh/packer
+  packer:
+    plugin: go
+    source: git://github.com/mitchellh/packer
+    source-tag: v0.11.0
+    go-importpath: github.com/mitchellh/packer
+    snap:
+    - bin/packer
