@@ -1,5 +1,5 @@
 name: packer
-version: "0.11.0"
+version: "0.12.2-1"
 summary: tool for creating machine images for multiple platforms
 description: Packer is a CLI tool for the automatic creation of identical machine images (single deployable units that contain a pre-configured OS and installed software) for multiple platforms (public cloud providers, private cloud and desktop virtualization solutions) from a single JSON template resp. configuration file.
 confinement: strict
@@ -15,8 +15,9 @@ apps:
 parts:
   packer:
     plugin: go
-    source: git://github.com/mitchellh/packer
-    source-tag: v0.11.0
+    source: https://github.com/mitchellh/packer
+    source-type: git
+    source-tag: v0.12.2
     go-importpath: github.com/mitchellh/packer
-    snap:
-    - bin/packer
+    prime:
+      - bin/packer
