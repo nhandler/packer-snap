@@ -19,5 +19,10 @@ parts:
     source-type: git
     source-tag: v1.0.0
     go-importpath: github.com/mitchellh/packer
+    go-packages: [github.com/mitchellh/packer]
+    go-buildtags: [core]
     prime:
       - bin/packer
+    after: [go]
+  go:
+    source-tag: go1.8
