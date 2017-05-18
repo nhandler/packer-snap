@@ -1,5 +1,5 @@
 name: packer
-version: "1.0.0-1"
+version: "1.0.0-2"
 summary: tool for creating machine images for multiple platforms
 description: Packer is a CLI tool for the automatic creation of identical machine images (single deployable units that contain a pre-configured OS and installed software) for multiple platforms (public cloud providers, private cloud and desktop virtualization solutions) from a single JSON template resp. configuration file.
 confinement: strict
